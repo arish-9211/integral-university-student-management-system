@@ -1,0 +1,37 @@
+STUDENT MANAGEMENT SYSTEM — LOCAL VS CODE PROJECT
+
+1. Extract this ZIP and open the student-management-system folder in VS Code.
+2. Have JDK 17 or newer and MongoDB Community Server installed.
+3. Start MongoDB if it is not already running:
+
+   powershell -ExecutionPolicy Bypass -File .\start-mongodb.ps1
+
+4. Open a second VS Code terminal in the same folder:
+
+   .\run.bat
+
+5. Open http://localhost:8080
+
+Demo email:    admin@studentmanagement.local
+Demo password: Admin@123
+
+The ZIP includes a tested Java JAR, so first launch does not require Maven
+or dependency downloads. MongoDB and Java must still be installed.
+
+After changing source code, stop the app and run:
+
+   .\run.bat -Rebuild
+
+Build/test from source:
+
+   .\mvnw.cmd clean package
+
+Maven/dependencies need internet on their first download.
+Do not use VS Code Live Server; run the Java application.
+
+README.md includes installation, configuration and troubleshooting.
+docs/PROJECT-REPORT.md contains the architecture report, resume bullets,
+five interview questions/answers, and the complete Add Student flow.
+docs/VERIFICATION.md records the observed tests.
+
+Nothing has been deployed.

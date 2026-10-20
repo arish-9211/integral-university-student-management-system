@@ -1,0 +1,152 @@
+<a href="#dashboard" class="brand">
+  <span class="brand-mark">IU</span>
+
+  <span>
+    Integral University
+    <br>
+    <small>STUDENT MANAGEMENT</small>
+  </span>
+</a><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integral University | Student Management System</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div id="sidebar-scrim"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <a href="#dashboard" class="brand">
+      <span class="brand-mark">IU</span>
+      <span>
+        Integral University
+        <br>
+        <small>STUDENT MANAGEMENT</small>
+      </span>
+    </a>
+
+    <div class="workspace-label">WORKSPACE</div>
+
+    <nav id="navigation" aria-label="Main navigation"></nav>
+
+    <div class="sidebar-bottom">
+      <div class="local-badge">
+        <span class="status-dot"></span>
+        Local workspace
+      </div>
+
+      <button type="button" id="logout" class="logout-button">
+        Sign out <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-shell">
+    <header class="topbar">
+      <div class="breadcrumb">
+        <button
+          type="button"
+          id="menu-button"
+          class="icon-button"
+          aria-label="Toggle navigation"
+          aria-controls="sidebar"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <span>Workspace</span>
+        <span class="crumb-divider">/</span>
+        <strong id="page-crumb">Dashboard</strong>
+      </div>
+
+      <div class="topbar-right">
+        <span id="today"></span>
+        <span class="top-divider"></span>
+
+        <a class="user-chip" href="#profile">
+          <span class="avatar" id="user-initials">AA</span>
+          <span id="user-name">Administrator</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="content" tabindex="-1"></main>
+
+    <footer class="app-footer">
+      <span>Integral University</span>
+      <span>Student Management System</span>
+    </footer>
+  </div>
+
+  <dialog id="editor" aria-labelledby="editor-title">
+    <form id="editor-form">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">INTEGRAL UNIVERSITY</span>
+          <h2 id="editor-title"></h2>
+        </div>
+
+        <button
+          type="button"
+          class="icon-button close-dialog"
+          aria-label="Close dialog"
+        >
+          ×
+        </button>
+      </div>
+
+      <div id="editor-fields" class="form-grid"></div>
+
+      <div
+        class="form-error"
+        id="editor-error"
+        role="alert"
+        hidden
+      ></div>
+
+      <div class="dialog-actions">
+        <button type="button" class="button secondary close-dialog">
+          Cancel
+        </button>
+
+        <button type="submit" class="button primary" id="save-button">
+          Save record
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+    <div class="confirm-body">
+      <span class="danger-icon" aria-hidden="true">!</span>
+
+      <h2 id="confirm-title">Delete this record?</h2>
+
+      <p class="muted">
+        This action cannot be undone. Related academic records must be
+        removed first.
+      </p>
+
+      <div class="dialog-actions">
+        <button type="button" id="cancel-delete" class="button secondary">
+          Keep record
+        </button>
+
+        <button type="button" id="confirm-delete" class="button danger">
+          Delete record
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toasts" role="status" aria-live="polite"></div>
+</body>
+</html>
